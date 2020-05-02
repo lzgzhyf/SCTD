@@ -15,3 +15,5 @@ jobs:
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
         white_list: 'SCTD'
+        force_update: true
+        clone_style: "ssh"
