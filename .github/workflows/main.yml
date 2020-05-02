@@ -1,0 +1,15 @@
+on: push
+name: Tests
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:    
+    - name: Mirror Github to Gitee with white list
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/lzgzhyf
+        dst: gitee/lzgzhyf
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        dst_token:  ${{ secrets.GITEE_TOKEN }}
+        white_list: 'SCTD'
